@@ -15,9 +15,9 @@ PS:目前组件里面没有实现key的生效时间，需要手动清除，后�
     
 #Example
 
+    var getCache = require('../lib').getCache;
     getCache('aa', function(cb){
-        cb(null, '123');
+        cb(null, '123')
     },function(err, data){
         console.log(data);
     });
-
