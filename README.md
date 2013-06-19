@@ -14,17 +14,17 @@ node.js use redis to cache
     
 #Example
 
-		var getCache = require('../lib').getCache;
-		var cache = require('../lib');
-
-		cache.init();  
-
-		getCache('aa', function(cb){
-		    cb(null, '123')
-
-		},function(err, data){
-		    console.log(data);
-		});
+	var getCache = require('../lib').getCache;
+	var cache = require('../lib');
+	
+	cache.init();  
+	
+	getCache('aa', function(cb){
+	    cb(null, '123')
+	
+	},function(err, data){
+	    console.log(data);
+	});
 
 #Public API
 
