@@ -1,8 +1,8 @@
 {
-  "name": "redis-cache",
-  "version": "0.0.1",
-  "private": true,
+  "name": "nredis-cache",
+  "version": "0.0.2",
   "dependencies": {
-    "redis": "*"
+    "redis": "*",
+    "async": "*"
   }
 }
