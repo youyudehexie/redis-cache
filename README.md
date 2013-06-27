@@ -25,6 +25,17 @@ node.js use redis to cache
 	},function(err, data){
 	    console.log(data);
 	});
+	
+
+	recoverCache('test*', 'get', function(datas, cb){ //匹配 test键值名 如test1，test2的键值
+	    datas.forEach(function(data){                 //删除前保存datas
+		console.log('data: ' + data);             //最后删除后被回调	
+	    });
+	    cb(null, 'abc');
+	},function(err){
+	    console.log(err);
+	})
+
 
 #Public API
 
@@ -39,6 +50,13 @@ node.js use redis to cache
 +  key: 从缓存里获取值的键值
 +  func: 产生键值的函数
 +  cb: 回调函数
+
+##p.recoverCache(keys, method, chuli, cb)
+
++ keys 匹配要删除的键值名
++ method 获取键值名的方法，如get
++ chuli 处理键值获取的值，根据自己需要确定是否回写到数据库
++ cb 回调函数
 
 #TODO
 
